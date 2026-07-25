@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎁 A Little Gift for Dhivya</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+    background:
+        linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+        url("images/friends.jpeg"),
+        linear-gradient(-45deg,#ff4b91,#ff6f61,#ffb347,#7f5af0);
+    background-size:cover, cover, 400% 400%;
+    background-position:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.card{
+    z-index:2;
+    padding:45px 35px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.3);
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,.4);
+    max-width:650px;
+    margin:20px;
+    animation:fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+    from{ opacity:0; transform:translateY(20px); }
+    to{ opacity:1; transform:translateY(0); }
+}
+
+.label{
+    font-size:18px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    opacity:.85;
+    margin-bottom:15px;
+}
+
+.verse{
+    font-size:28px;
+    line-height:1.6;
+    font-weight:600;
+    font-style:italic;
+    text-shadow:0 0 15px rgba(0,0,0,.6);
+}
+
+.reference{
+    margin-top:20px;
+    font-size:20px;
+    font-weight:700;
+    color:#ffd54f;
+}
+
+.note{
+    margin-top:25px;
+    font-size:17px;
+    font-weight:500;
+    opacity:.9;
+}
+
+a.back{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 30px;
+    border-radius:50px;
+    background:linear-gradient(45deg,#ff4081,#ff9800);
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+a.back:hover{
+    transform:translateY(-4px) scale(1.05);
+}
+
+@media(max-width:600px){
+    .verse{ font-size:20px; }
+    .card{ padding:30px 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <div class="label">🎁 Your Gift</div>
+    <div class="verse">
+        "The Lord bless you and keep you; the Lord make His face shine on you and be gracious to you; the Lord turn His face toward you and give you peace."
+    </div>
+    <div class="reference">— Numbers 6:24-26</div>
+    <div class="note">Happy Birthday, Dhivya 💖<br>May this year be full of His blessings.</div>
+    <a class="back" href="index.html">🎂 Back to the Party</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+    background:linear-gradient(-45deg,#ff4b91,#ff6f61,#ffb347,#7f5af0);
+    background-size:400% 400%;
+    animation:bgAnimation 10s ease infinite;
+    position:relative;
+}
+
+/* Animated Background */
+@keyframes bgAnimation{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Glass Card */
+.container{
+    z-index:10;
+    padding:40px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.3);
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+    max-width:900px;
+    margin:40px 20px;
+}
+
+/* Cake */
+.cake{
+    font-size:120px;
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+/* Heading */
+h1{
+    font-size:58px;
+    margin-top:10px;
+    font-weight:800;
+    text-shadow:0 0 15px white;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px white;
+    }
+    to{
+        text-shadow:0 0 30px white,
+                     0 0 60px gold;
+    }
+}
+
+/* Typewriter */
+#typewriter{
+    margin:25px auto;
+    max-width:800px;
+    font-size:24px;
+    line-height:1.7;
+    font-weight:600;
+    min-height:120px;
+}
+
+#giftMessage{
+    margin-top:15px;
+    font-size:20px;
+    font-weight:600;
+    min-height:30px;
+}
+
+/* Buttons */
+button{
+    margin:10px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(45deg,#ff4081,#ff9800);
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+}
+
+button:hover{
+    transform:translateY(-5px) scale(1.05);
+}
+
+/* Balloons */
+.balloon{
+    position:fixed;
+    bottom:-150px;
+    font-size:50px;
+    animation:float linear infinite;
+    pointer-events:none;
+    z-index:5;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-120vh);
+    }
+}
+
+/* Stars */
+.star{
+    position:fixed;
+    pointer-events:none;
+    animation:twinkle 2s infinite;
+    z-index:1;
+}
+
+@keyframes twinkle{
+    0%,100%{
+        opacity:1;
+        transform:scale(1);
+    }
+    50%{
+        opacity:.3;
+        transform:scale(.5);
+    }
+}
+
+/* Confetti */
+.confetti{
+    position:fixed;
+    width:12px;
+    height:12px;
+    border-radius:2px;
+    animation:fall linear forwards;
+    z-index:20;
+    top:-20px;
+}
+
+@keyframes fall{
+    0%{
+        transform:translateY(-100px) rotate(0deg);
+    }
+    100%{
+        transform:translateY(120vh) rotate(720deg);
+    }
+}
+
+/* Candle flame flicker (used for blow-out effect) */
+.flame{
+    display:inline-block;
+    animation:flicker 0.3s infinite alternate;
+}
+
+@keyframes flicker{
+    from{ opacity:1; }
+    to{ opacity:.6; }
+}
+
+/* Floating Hearts */
+.heart{
+    position:fixed;
+    animation:heartFloat 6s linear forwards;
+    pointer-events:none;
+    z-index:20;
+}
+
+@keyframes heartFloat{
+    from{
+        transform:translateY(0) scale(1);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100vh) scale(1.8);
+        opacity:0;
+    }
+}
+
+/* Fireworks */
+.firework{
+    position:fixed;
+    font-size:35px;
+    animation:explode 2s forwards;
+    z-index:20;
+}
+
+@keyframes explode{
+    from{
+        transform:scale(.5);
+        opacity:1;
+    }
+    to{
+        transform:scale(2);
+        opacity:0;
+    }
+}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+
+    .container{
+        width:90%;
+        padding:25px;
+    }
+
+    h1{
+        font-size:34px;
+    }
+
+    .cake{
+        font-size:80px;
+    }
+
+    #typewriter{
+        font-size:18px;
+    }
+
+    button{
+        width:100%;
+        margin:8px 0;
+    }
+}
